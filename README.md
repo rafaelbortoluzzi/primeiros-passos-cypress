@@ -1,3 +1,3 @@
 # My Cypress Automation
 
-Firs Readme
+First Readme
