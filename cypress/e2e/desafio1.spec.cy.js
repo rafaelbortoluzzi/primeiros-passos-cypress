@@ -1,24 +1,24 @@
 import userData from "../fixtures/user-data.json";
 
 describe("Orange HRM Tests", () => {
-  //   const selectorsList = {
-  //     usernameField: "[name= 'username']",
-  //     passwordField: "[name='password']",
-  //     loginButton: "[type='submit']",
-  //     topbarHeader: ".oxd-topbar-header-breadcrumb-module",
-  //     wrongCredentialAlert: "[role='alert']",
-  //     myInfoButton: '[href="/web/index.php/pim/viewMyDetails"]',
-  //     firstNameField: '[name="firstName"]',
-  //     middleNameField: '[name="middleName"]',
-  //     lastNameField: '[name="lastName"]',
-  //     genericField: ".oxd-input--active",
-  //     dateCloseButton: ".--close",
-  //     submitButton: ".oxd-button--medium",
-  //     comboboxSelector: ".oxd-select-wrapper",
-  //     secondItemCombobox: ".oxd-select-dropdown > :nth-child(16)",
-  //     thirdItemCombobox: ".oxd-select-dropdown > :nth-child(3)",
-  //     fourthItemCombobox: ".oxd-select-dropdown > :nth-child(2)",
-  //   };
+  const selectorsList = {
+    usernameField: "[name= 'username']",
+    passwordField: "[name='password']",
+    loginButton: "[type='submit']",
+    topbarHeader: ".oxd-topbar-header-breadcrumb-module",
+    wrongCredentialAlert: "[role='alert']",
+    myInfoButton: '[href="/web/index.php/pim/viewMyDetails"]',
+    firstNameField: '[name="firstName"]',
+    middleNameField: '[name="middleName"]',
+    lastNameField: '[name="lastName"]',
+    genericField: ".oxd-input--active",
+    dateCloseButton: ".--close",
+    submitButton: ".oxd-button--medium",
+    comboboxSelector: ".oxd-select-wrapper",
+    secondItemCombobox: ".oxd-select-dropdown > :nth-child(16)",
+    thirdItemCombobox: ".oxd-select-dropdown > :nth-child(3)",
+    fourthItemCombobox: ".oxd-select-dropdown > :nth-child(2)",
+  };
 
   it.only("User Info Update - Success", () => {
     cy.visit("/auth/login");
