@@ -1,3 +1,5 @@
+import userData from "../fixtures/user-data.json";
+
 describe("Orange HRM Tests", () => {
   const selectorsList = {
     usernameField: "[name= 'username']",
@@ -5,17 +7,6 @@ describe("Orange HRM Tests", () => {
     loginButton: "[type='submit']",
     topbarHeader: ".oxd-topbar-header-breadcrumb-module",
     wrongCredentialAlert: "[role='alert']",
-  };
-
-  const userData = {
-    userSuccess: {
-      username: "Admin",
-      password: "admin123",
-    },
-    userFail: {
-      username: "Teste",
-      password: "teste123",
-    },
   };
 
   it("Login - Success", () => {
