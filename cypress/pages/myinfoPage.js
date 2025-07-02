@@ -13,18 +13,25 @@ class MyInfoPage {
       genericField: ".oxd-input--active",
       dateCloseButton: ".--close",
       submitButton: ".oxd-button--medium",
+      genderButton: ".oxd-radio-input",
     };
     return selectors;
   }
-  fillwithData() {
-    cy.get(this.selectorsList().firstNameField).clear().type("Rafael");
-    cy.get(this.selectorsList().middleNameField).clear().type("Danilo Santos");
-    cy.get(this.selectorsList().lastNameField).clear().type("Bortoluzzi");
-    cy.get(this.selectorsList().genericField).eq(3).clear().type("123456");
-    cy.get(this.selectorsList().genericField).eq(4).clear().type("1234");
-    cy.get(this.selectorsList().genericField).eq(5).clear().type("1234");
-    cy.get(this.selectorsList().genericField).eq(6).clear().type("2025-01-01");
+  fillPersonalDetails(firstName, middleName, lastName) {
+    cy.get(this.selectorsList().firstNameField).clear().type(firstName);
+    cy.get(this.selectorsList().middleNameField).clear().type(middleName);
+    cy.get(this.selectorsList().lastNameField).clear().type(lastName);
+  }
+  fillEmployeeDetails(employeeId, OtherId, driversLicense, dateOfBirth) {
+    cy.get(this.selectorsList().genericField).eq(3).clear().type(employeeId);
+    cy.get(this.selectorsList().genericField).eq(4).clear().type(OtherId);
+    cy.get(this.selectorsList().genericField)
+      .eq(5)
+      .clear()
+      .type(driversLicense);
+    cy.get(this.selectorsList().genericField).eq(6).clear().type(dateOfBirth);
     cy.get(this.selectorsList().dateCloseButton).click();
+    cy.get(this.selectorsList().genderButton).eq(1).click();
   }
   submitData() {
     cy.get(this.selectorsList().submitButton).eq(0).click();

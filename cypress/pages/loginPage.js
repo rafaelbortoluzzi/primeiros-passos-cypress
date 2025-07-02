@@ -18,6 +18,12 @@ class LoginPage {
     cy.get(this.selectorsList().passwordField).type(password);
     cy.get(this.selectorsList().loginButton).click();
   }
+  checkWrongCredentialsAlert() {
+    cy.get(this.selectorsList().wrongCredentialAlert).should(
+      "contain",
+      "Invalid credentials"
+    );
+  }
 }
 
 export default LoginPage;
